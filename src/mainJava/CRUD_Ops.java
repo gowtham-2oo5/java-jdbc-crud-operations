@@ -15,8 +15,8 @@ public class CRUD_Ops {
 	
 	CRUD_Ops() throws ClassNotFoundException, SQLException{
 		Class.forName("org.postgresql.Driver");
-		String user="Gowtham",pass="abcd";
-		c=DriverManager.getConnection("jdbc:postgresql://localhost:5432/java_jdbc",user,pass);
+		String url="jdbc:postgresql://localhost:5432/",dbName="java_jdbc",user="Gowtham",pass="abcd";
+		c=DriverManager.getConnection(url+dbName,user,pass);
 		if(c!=null)
 			System.out.println("Connection established");
 		else
